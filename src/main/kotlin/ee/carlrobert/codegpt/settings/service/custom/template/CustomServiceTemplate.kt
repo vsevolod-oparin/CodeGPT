@@ -41,6 +41,12 @@ enum class CustomServiceTemplate(
         CustomServiceChatCompletionTemplate.OPENAI,
         CustomServiceCodeCompletionTemplate.OPENAI
     ),
+    DEEPSEEK(
+        "DeepSeek",
+        "https://platform.deepseek.com/api-docs/api/create-chat-completion",
+        CustomServiceChatCompletionTemplate.DEEPSEEK,
+        CustomServiceCodeCompletionTemplate.DEEPSEEK
+    ),
     PERPLEXITY(
         "Perplexity AI",
         "https://docs.perplexity.ai/reference/post_chat_completions",

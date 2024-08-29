@@ -37,6 +37,18 @@ enum class CustomServiceCodeCompletionTemplate(
             "max_tokens" to 24
         )
     ),
+    DEEPSEEK(
+        "https://api.deepseek.com/beta/v1/completions",
+        getDefaultHeaders("Authorization", "Bearer \$CUSTOM_SERVICE_API_KEY"),
+        mutableMapOf(
+            "stream" to true,
+            "prompt" to "\$PREFIX",
+            "suffix" to "\$SUFFIX",
+            "model" to "deepseek-coder",
+            "temperature" to 0.2,
+            "max_tokens" to 24
+        )
+    ),
     TOGETHER(
         "https://api.together.xyz/v1/completions",
         getDefaultHeaders("Authorization", "Bearer \$CUSTOM_SERVICE_API_KEY"),

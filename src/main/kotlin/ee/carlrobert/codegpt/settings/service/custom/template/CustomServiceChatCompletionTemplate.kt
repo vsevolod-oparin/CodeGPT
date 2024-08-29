@@ -60,6 +60,16 @@ enum class CustomServiceChatCompletionTemplate(
             )
         )
     ),
+    DEEPSEEK(
+        "https://api.deepseek.com/beta/v1/chat/completions",
+        getDefaultHeaders("Authorization", "Bearer \$CUSTOM_SERVICE_API_KEY"),
+        getDefaultBodyParams(
+            mapOf(
+                "model" to "deepseek-coder",
+                "max_tokens" to 1024
+            )
+        )
+    ),
     PERPLEXITY(
         "https://api.perplexity.ai/chat/completions",
         getDefaultHeadersWithAuthentication(),
